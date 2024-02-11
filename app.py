@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request
 from estrutura_banco_de_dados import Autor, Postagem, app, db
-'''
-'''
+
 portaLocal = [5000, 7777]
 #Rota padrão - GET http://localhost:5000
 @app.route('/postagem/')
