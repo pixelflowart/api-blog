@@ -36,8 +36,11 @@ autor = Autor(nome='Daniel', email='danielbruno84@gamil.com', senha='123456', ad
 # Executa para zerar e criar/recriar Banco de Dados
 def inicializar_db():
     with  app.app_context():
+        # Executar o comando para criar banco de dados
         db.drop_all()
         db.create_all()
+        #Criar usuário administrador
+        autor = Autor(nome='Daniel', email='danielbruno84@gamil.com', senha='123456', admin=True) 
         db.session.add(autor)
         db.session.commit()
 
